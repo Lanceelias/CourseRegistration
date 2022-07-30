@@ -1,0 +1,35 @@
+﻿@{
+    ViewData["Title"] = "Students";
+}
+
+<div class="text-center">
+    <h1> Students </h1>
+</div>
+
+<div class="container">
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Student Id</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Email Address</th>
+                <th>Phone Number</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            @foreach (var item in @Model.Students)
+            {
+                <tr>
+                    <th scope="row">@item.Id</th>
+                    <td>@item.FirstName</td>
+                    <td>@item.LastName</td>
+                    <td>@item.EmailAdd</td>
+                    <td>@item.PhoneNumber</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+

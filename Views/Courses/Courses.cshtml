@@ -1,0 +1,33 @@
+﻿
+@{
+    ViewData["Title"] = "Courses";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Courses Page</h1>
+</div>
+
+<div class="container">
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Course Id</th>
+                <th>Course Number</th>
+                <th>Course Name</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            @foreach (var item in @Model.Courses)
+            {
+                <tr>
+                    <th scope="row">@item.Id</th>
+                    <td>@item.CourseNumber</td>
+                    <td>@item.CourseName</td>
+                    <td>@item.Description</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
